@@ -1,12 +1,43 @@
 # @juliuste/mdjson
 
-Transform markdown to an object with headings as keys. **Forked from [yoshuawuyts/mdjson](https://github.com/yoshuawuyts/mdjson).**
+Transform markdown to an object with headings as keys. **Originally forked from [yoshuawuyts/mdjson](https://github.com/yoshuawuyts/mdjson).**
 
 [![npm version](https://img.shields.io/npm/v/@juliuste/mdjson.svg)](https://www.npmjs.com/package/@juliuste/mdjson)
 [![Build Status](https://travis-ci.org/juliuste/mdjson.svg?branch=master)](https://travis-ci.org/juliuste/mdjson)
 [![Greenkeeper badge](https://badges.greenkeeper.io/juliuste/mdjson.svg)](https://greenkeeper.io/)
 [![license](https://img.shields.io/github/license/juliuste/mdjson.svg?style=flat)](license)
 [![chat on gitter](https://badges.gitter.im/juliuste.svg)](https://gitter.im/juliuste)
+
+## Installation
+
+```shell
+npm install @juliuste/mdjson
+```
+
+## Usage
+
+```js
+const mdjson = require('mdjson')
+
+const dictionary = mdjson(`
+    text before any headings will be ignored
+
+    # my heading
+    oh wow, amazing
+    another line
+
+    another paragraph
+
+    ### another heading
+    gorgeous copy, stunning
+
+    ## headings without content will also be ignored
+`)
+// => {
+//  'my heading': 'oh wow, amazing\nanother line\n\nanother paragraph',
+//  'another heading': 'gorgeous copy, stunning'
+//}
+```
 
 ## Contributing
 
