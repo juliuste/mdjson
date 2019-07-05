@@ -17,7 +17,7 @@ npm install @juliuste/mdjson
 ## Usage
 
 ```js
-const mdjson = require('mdjson')
+const mdjson = require('@juliuste/mdjson')
 
 const dictionary = mdjson(`
     text before any headings will be ignored
