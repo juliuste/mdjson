@@ -14,7 +14,7 @@ test('works with simple markdown', t => {
 	const dictionary = mdjson(markdown)
 	t.deepLooseEqual(dictionary, {
 		'my heading': 'oh wow, amazing',
-		'another heading': 'gorgeous copy, stunning'
+		'another heading': 'gorgeous copy, stunning `details` and [a link](https://www.web.com)'
 	})
 	t.end()
 })
@@ -24,7 +24,7 @@ test('works with multiple paragraphs', t => {
 	const dictionary = mdjson(markdown)
 	t.deepEqual(dictionary, {
 		'first heading': '  Hi there!\n\nThis content runs over multiple lines...',
-		'second heading': 'As does this one.\nYup.\n\nWith even more whitespace :O'
+		'second heading': 'As does this one.\n\nYup.\n\nWith even more whitespace :O'
 	})
 	t.end()
 })

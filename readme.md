@@ -24,18 +24,18 @@ const dictionary = mdjson(`
 
     # my heading
     oh wow, amazing
-    another line
+    newline means new paragraph
 
     another paragraph
 
     ### another heading
-    gorgeous copy, stunning
+    gorgeous copy, stunning, [some other markdown](https://www.abc.de)
 
     ## headings without content will also be ignored
 `)
 // => {
-//  'my heading': 'oh wow, amazing\nanother line\n\nanother paragraph',
-//  'another heading': 'gorgeous copy, stunning'
+//  'my heading': 'oh wow, amazing\n\nnewline means new paragraph\n\nanother paragraph',
+//  'another heading': 'gorgeous copy, stunning, [some other markdown](https://www.abc.de)'
 //}
 ```
 
