@@ -1,7 +1,7 @@
 {
 	"name": "@juliuste/mdjson",
 	"description": "Transform markdown to an object with headings as keys.",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"keywords": [
 		"markdown",
 		"json",
